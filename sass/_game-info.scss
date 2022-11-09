@@ -1,0 +1,106 @@
+// GAME INFO CONTAINER
+
+// MAIN CONTAINER
+.game-info-container {
+  font-family: Poppins;
+  width: 300px;
+  height: 500px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #7743db;
+  border-radius: 30px;
+  color: white;
+  flex-direction: column;
+  gap: 20px;
+}
+
+// SECTION TITLE
+.game-info-title {
+  font-family: Poppins;
+  font-weight: 800;
+  background-color: #ffe9b1;
+  height: 60px;
+  width: 180px;
+  border-radius: 20px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  justify-self: flex-start;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+// PLAYERS SECTION
+.game-player-title {
+  font-family: Poppins;
+  font-weight: 800;
+  background-color: #3b3486;
+  height: 40px;
+  width: 100px;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  justify-self: flex-start;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.game-info-players {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  justify-self: flex-start;
+  align-self: flex-start;
+  width: 100%;
+}
+
+.game-info-player1,
+.game-info-player2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#player1,
+#player2 {
+  align-self: center;
+  justify-self: center;
+  width: 70%;
+  height: 40px;
+  border: none;
+  font-family: Poppins;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+// DESCRIPTION SECTION
+
+.game-info-description {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+//PLAY BUTTON
+.game-info-play-button {
+  border-style: none;
+  width: 50%;
+  height: 40px;
+  border-radius: 20px;
+  background-color: white;
+  font-family: Poppins;
+  font-weight: 800;
+  letter-spacing: 5px;
+  font-size: 1rem;
+}
+
+.game-info-play-button:hover {
+  scale: 1.1;
+}

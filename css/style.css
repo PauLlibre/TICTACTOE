@@ -1,0 +1,254 @@
+.game-table-container {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  display: grid;
+  background-color: var(--main-color-4);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.game-table-cell {
+  border: 1px solid black;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+}
+
+.game-info-container {
+  font-family: Poppins;
+  width: 300px;
+  height: 500px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #7743db;
+  border-radius: 30px;
+  color: white;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.game-info-title {
+  font-family: Poppins;
+  font-weight: 800;
+  background-color: #ffe9b1;
+  height: 60px;
+  width: 180px;
+  border-radius: 20px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  justify-self: flex-start;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.game-player-title {
+  font-family: Poppins;
+  font-weight: 800;
+  background-color: #3b3486;
+  height: 40px;
+  width: 100px;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  justify-self: flex-start;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.game-info-players {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  justify-self: flex-start;
+  align-self: flex-start;
+  width: 100%;
+}
+
+.game-info-player1,
+.game-info-player2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#player1,
+#player2 {
+  align-self: center;
+  justify-self: center;
+  width: 70%;
+  height: 40px;
+  border: none;
+  font-family: Poppins;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.game-info-description {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.game-info-play-button {
+  border-style: none;
+  width: 50%;
+  height: 40px;
+  border-radius: 20px;
+  background-color: white;
+  font-family: Poppins;
+  font-weight: 800;
+  letter-spacing: 5px;
+  font-size: 1rem;
+}
+
+.game-info-play-button:hover {
+  scale: 1.1;
+}
+
+.game-instructions-container {
+  width: 300px;
+  height: 500px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.winning-screen-container {
+  position: absolute;
+  background-color: green;
+  width: 100%;
+  height: 100%;
+  opacity: 80%;
+  font-family: var(--main-font);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
+  visibility: hidden;
+  top: -100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.winning-screen-win-button {
+  width: 100px;
+  align-self: center;
+  height: 80px;
+}
+
+.player-win {
+  align-self: center;
+  color: white;
+  font-weight: 800;
+  font-size: 8rem;
+  opacity: 100%;
+}
+
+.player-play-mode-container {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  visibility: hidden;
+  bottom: -100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.player-play-mode-main-container {
+  width: 50%;
+  height: 80%;
+  background-color: var(--main-color-3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: var(--main-font);
+  gap: 20px;
+  border-radius: 30px;
+  border: 4px solid black;
+}
+
+.player-play-mode-main-container h1 {
+  padding-top: 40px;
+}
+
+.player-play-mode-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  padding-top: 70px;
+}
+
+.mode-selector-icon {
+  width: 90px;
+}
+
+.mode-selector-img-container {
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px black solid;
+  border-radius: 20px;
+}
+
+.mode-selector-img-container:hover {
+  background-color: var(--main-color-2);
+}
+
+:root {
+  --main-color-1: #3b3486;
+  --main-color-2: #7743db;
+  --main-color-3: #ffe9b1;
+  --main-color-4: #fcfdf2;
+  --main-font: Poppins;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--main-color-1);
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  height: 100vh;
+  justify-items: center;
+  align-items: center;
+}
+
+.bold {
+  font-weight: 800;
+  color: var(--main-color-3);
+}
+
+.visible {
+  visibility: visible;
+  top: 0;
+  scale: 1;
+  left: 0;
+  bottom: 0;
+}
+
+.invisible {
+  visibility: hidden;
+}/*# sourceMappingURL=style.css.map */

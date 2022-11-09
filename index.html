@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>MAPA</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="game-instructions-container">GAME INSTRUCTIONS</div>
+      <div class="game-table-container">
+        <div class="game-table-cell" id="cell1"></div>
+        <div class="game-table-cell" id="cell2"></div>
+        <div class="game-table-cell" id="cell3"></div>
+        <div class="game-table-cell" id="cell4"></div>
+        <div class="game-table-cell" id="cell5"></div>
+        <div class="game-table-cell" id="cell6"></div>
+        <div class="game-table-cell" id="cell7"></div>
+        <div class="game-table-cell" id="cell8"></div>
+        <div class="game-table-cell" id="cell9"></div>
+      </div>
+
+      <!-- GAME INFO CONTAINER -->
+      <div class="game-info-container">
+        <div class="game-info-title"><h2>GAME INFO</h2></div>
+        <div class="game-info-players">
+          <div class="game-info-player1">
+            <div class="game-player-title"><h3>Player 1</h3></div>
+            <input type="text" name="player1" id="player1" />
+          </div>
+          <div class="game-info-player2">
+            <div class="game-player-title"><h3>Player 2</h3></div>
+            <input type="text" name="player2" id="player2" />
+          </div>
+        </div>
+        <div class="game-info-description">
+          <p>
+            Welcome to <span class="bold">TIC TAC TOE</span>, Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Distinctio magnam eveniet
+            iusto dolore quia, aliquid dignissimos voluptate consequuntur,
+            minima tempore temporibus quae reiciendis blanditiis quam vitae
+            nulla exercitationem, eaque commodi.
+          </p>
+          <p><span class="bold">ENJOY THE GAME!</span></p>
+        </div>
+        <button class="game-info-play-button" id="infoPlayButton">PLAY</button>
+      </div>
+      <!-- PLAYER NAMES -->
+      <div class="player-play-mode-container" id="modeSelector">
+        <div class="player-play-mode-main-container">
+          <h1>SELECT A MODE</h1>
+          <div class="player-play-mode-selector">
+            <div class="mode-selector-img-container" id="playerVsPlayer">
+              <img
+                class="mode-selector-icon"
+                src="imgs/player_vs_player_icon.png"
+                alt=""
+              />
+            </div>
+
+            <h3>or</h3>
+            <div class="mode-selector-img-container">
+              <img class="mode-selector-icon" src="imgs/robot.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WINNING SCREEN -->
+      <div class="winning-screen-container hinge" id="winningScreen">
+        <div class="player-win">PLAYER 1 WINS!</div>
+        <button
+          id="playAgain"
+          class="game-info-play-button winning-screen-win-button"
+        >
+          PLAY AGAIN
+        </button>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
