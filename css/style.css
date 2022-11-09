@@ -166,7 +166,7 @@
   align-items: center;
   flex-direction: column;
   visibility: hidden;
-  bottom: -100%;
+  left: -100%;
   transition: all 0.5s ease-in-out;
 }
 
