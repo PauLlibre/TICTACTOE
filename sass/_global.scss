@@ -2,6 +2,7 @@
   --main-color-1: #3b3486;
   --main-color-2: #7743db;
   --main-color-3: #ffe9b1;
+  --main-color-3-darker: #ecd7a3;
   --main-color-4: #fcfdf2;
   --main-font: Poppins;
 }
@@ -36,6 +37,10 @@ body {
   bottom: 0;
 }
 
+.appear {
+  display: flex;
+}
+
 .invisible {
-  visibility: hidden;
+  display: none;
 }

@@ -185,7 +185,8 @@ document
 document
   .getElementById("playerVsPlayer")
   .addEventListener("click", function () {
-    document.getElementById("modeSelector").classList.remove("visible");
+    document.getElementById("playMode").classList.add("invisible");
+    document.getElementById("playerNaming").classList.add("appear");
   });
 
 //PLAY AGAIN
@@ -207,4 +208,15 @@ function cleanTable() {
   numberOfO = [];
   numberOfX = [];
   round = 1;
+}
+
+//SELECT AVATAR
+for (i = 1; i < 4; i++) {
+  document
+    .getElementById("avatar" + i.toString())
+    .addEventListener("click", function () {
+      document
+        .getElementById("avatar" + i.toString())
+        .classList.add("selected");
+    });
 }

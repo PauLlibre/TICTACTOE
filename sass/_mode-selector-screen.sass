@@ -48,3 +48,72 @@
 
 .mode-selector-img-container:hover
     background-color: var(--main-color-2)
+
+//PLAYER SELECTION
+
+.game-info-players
+    display: none
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    justify-self: flex-start
+    align-self: flex-start
+    width: 100%
+
+.player-selection-title
+    color: var(--main-color-1)
+
+.game-info-player1,
+.game-info-player2
+    width: 100%
+    display: flex
+    flex-direction: column
+    gap: 20px
+    padding-right: 10%
+    padding-left: 20%
+
+.game-info-player2
+    padding-top: 10%
+
+.game-player-title-avatar
+    display: flex
+    gap: 40px
+
+#player1,
+#player2
+    align-self: center
+    justify-self: center
+    width: 70%
+    height: 40px
+    border: none
+    font-family: Poppins
+    letter-spacing: 4px
+    border-radius: 20px
+    color: var(--main-color-1)
+    padding-left: 20px
+
+.avatar
+    width: 40px
+
+.player-selection-avatars
+    display: flex
+    gap: 10px
+
+.avatar-frame
+    width: 60px
+    height: 60px
+    border-radius: 50%
+    background-color: white
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 4px solid black
+
+.avatar-frame:hover
+    scale: 1.1
+
+.selected
+    border: 4px solid var(--main-color-2)
+
+.avatar-frame:active
+    border: 4px solid var(--main-color-2)
