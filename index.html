@@ -60,7 +60,7 @@
               </div>
 
               <h3>or</h3>
-              <div class="mode-selector-img-container">
+              <div class="mode-selector-img-container" id="playerVsCpu">
                 <img class="mode-selector-icon" src="imgs/robot.png" alt="" />
               </div>
             </div>
@@ -76,10 +76,10 @@
               <div class="game-player-title-avatar">
                 <div class="game-player-title"><h3>Player 1</h3></div>
                 <div class="player-selection-avatars">
-                  <div class="avatar-frame" id="avatar1">
+                  <div class="avatar-frame" id="avatar1" name="boy">
                     <img src="imgs/boy.png" alt="" class="avatar" />
                   </div>
-                  <div class="avatar-frame" id="avatar2">
+                  <div class="avatar-frame" id="avatar2" name="girl">
                     <img src="imgs/girl.png" alt="" class="avatar" />
                   </div>
                 </div>
@@ -92,23 +92,24 @@
               <div class="game-player-title-avatar">
                 <div class="game-player-title"><h3>Player 2</h3></div>
                 <div class="player-selection-avatars">
-                  <div class="avatar-frame" id="avatar3">
+                  <div class="avatar-frame" id="avatar3" name="boy">
                     <img src="imgs/boy.png" alt="" class="avatar" />
                   </div>
-                  <div class="avatar-frame" id="avatar4">
+                  <div class="avatar-frame" id="avatar4" name="girl">
                     <img src="imgs/girl.png" alt="" class="avatar" />
                   </div>
                 </div>
               </div>
               <input type="text" name="player2" id="player2" />
             </div>
+            <button class="player-info-button" id="letsPlay">LET'S PLAY</button>
           </div>
         </div>
       </div>
 
       <!-- WINNING SCREEN -->
       <div class="winning-screen-container hinge" id="winningScreen">
-        <div class="player-win">PLAYER 1 WINS!</div>
+        <div class="player-win" id="winner"></div>
         <button
           id="playAgain"
           class="game-info-play-button winning-screen-win-button"
