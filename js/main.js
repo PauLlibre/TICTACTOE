@@ -6,6 +6,10 @@ let positionOfX = [];
 let positionOfO = [];
 let player1win = ["x", "x", "x"];
 let playMode = "";
+let gameOver = false;
+const playAudio = new Audio("../audio/ES_Toy Wood Block 2 - SFX Producer.mp3");
+const victoryAudio = new Audio("../audio/ES_PE-Music 22 - SFX Producer.mp3");
+const buttonPress = new Audio("../audio/POP.mp3");
 
 // CONTENIDO DE DENTRO LA CELDAS
 
@@ -27,6 +31,13 @@ function humanPlay() {
             console.log(round);
             tableState();
             victory();
+            document
+              .getElementById("player2Container")
+              .classList.add("selected");
+            document
+              .getElementById("player1Container")
+              .classList.remove("selected");
+            playAudio.play();
           } else if (round % 2 == 0) {
             if (round % 2 == 0) {
               document.getElementById(cell).innerHTML = "o";
@@ -36,6 +47,13 @@ function humanPlay() {
               console.log(round);
               tableState();
               victory();
+              document
+                .getElementById("player1Container")
+                .classList.add("selected");
+              document
+                .getElementById("player2Container")
+                .classList.remove("selected");
+              playAudio.play();
             }
           }
         }
@@ -143,6 +161,7 @@ function victory() {
     document.getElementById("winner").innerHTML = `${player1Name} WINS!`;
     positionOfX = [];
     positionOfO = [];
+    victoryAudio.play();
   } else if (
     (win.verticalRowA[0] == "o" &&
       win.verticalRowA[1] == "o" &&
@@ -173,6 +192,8 @@ function victory() {
     document.getElementById("winner").innerHTML = `${player2Name} WINS!`;
     positionOfX = [];
     positionOfO = [];
+    gameOver = true;
+    victoryAudio.play();
   } else {
     console.log("error");
   }
@@ -188,6 +209,7 @@ document
     document.getElementById("modeSelector").classList.add("visible");
     document.getElementById("playerNaming").classList.remove("appear");
     document.getElementById("playMode").classList.remove("invisible");
+    buttonPress.play();
   });
 
 //MODE SELECTION SCREEN
@@ -197,12 +219,16 @@ document
     document.getElementById("playMode").classList.add("invisible");
     document.getElementById("playerNaming").classList.add("appear");
     playMode = "human";
+    buttonPress.play();
+    console.log(playMode);
   });
 
 document.getElementById("playerVsCpu").addEventListener("click", function () {
   document.getElementById("playMode").classList.add("invisible");
   document.getElementById("playerNaming").classList.add("appear");
   playMode = "cpu";
+  buttonPress.play();
+  console.log(playMode);
 });
 
 //PLAY AGAIN
@@ -212,6 +238,9 @@ document.getElementById("playerVsCpu").addEventListener("click", function () {
 document.getElementById("playAgain").addEventListener("click", function () {
   document.getElementById("winningScreen").classList.remove("visible");
   cleanTable();
+  document.getElementById("player1Container").classList.add("selected");
+  document.getElementById("player2Container").classList.remove("selected");
+  buttonPress.play();
 });
 
 //PLAY AGAIN RESET TABLE
@@ -237,6 +266,7 @@ let p1SelectedCharacter = "";
 let p2SelectedCharacter = "";
 
 avatar1.addEventListener("click", function () {
+  buttonPress.play();
   if (avatar2.classList.contains("selected")) {
     avatar2.classList.remove("selected");
     avatar1.classList.add("selected");
@@ -247,6 +277,7 @@ avatar1.addEventListener("click", function () {
   }
 });
 avatar2.addEventListener("click", function () {
+  buttonPress.play();
   if (avatar1.classList.contains("selected")) {
     avatar1.classList.remove("selected");
     avatar2.classList.add("selected");
@@ -257,6 +288,7 @@ avatar2.addEventListener("click", function () {
   }
 });
 avatar3.addEventListener("click", function () {
+  buttonPress.play();
   if (avatar4.classList.contains("selected")) {
     avatar4.classList.remove("selected");
     avatar3.classList.add("selected");
@@ -267,6 +299,7 @@ avatar3.addEventListener("click", function () {
   }
 });
 avatar4.addEventListener("click", function () {
+  buttonPress.play();
   if (avatar3.classList.contains("selected")) {
     avatar3.classList.remove("selected");
     avatar4.classList.add("selected");
@@ -299,7 +332,7 @@ function CPUlevel1() {
           positionOfX.push(cell);
           positionOfX.sort();
           console.log(positionOfX);
-
+          playAudio.play();
           cpuLevel1Move();
 
           tableState();
@@ -379,9 +412,36 @@ document.getElementById("letsPlay").addEventListener("click", function () {
   console.log(player1Name);
   console.log(player2Name);
   document.getElementById("modeSelector").classList.remove("visible");
+  buttonPress.play();
   if (playMode == "human") {
     humanPlay();
   } else if (playMode == "cpu") {
     CPUlevel1();
   }
+  let cells = document.getElementsByClassName("game-table-cell");
+  for (let cell of cells) {
+    cell.classList.add("started-cell");
+  }
+  document.getElementById("game-table-container").classList.add("started");
+  document.getElementById("logo").classList.add("no-display");
+  document.querySelector(".game-info-description").classList.add("no-display");
+  document
+    .querySelector(".game-info-description-live")
+    .classList.remove("no-display");
+  document.getElementById("game-info-live").innerHTML = `<h3>P1 :</h3>
+  <div class="player-name-container selected" id="player1Container">
+  <h3>${player1Name}</h3>
+               
+                        
+         
+                  </div>
+                  <h3>P2 : </h3>
+                  <div class="player-name-container " id="player2Container">
+                  <h3>${player2Name}</h3>
+                  
+                        
+             
+                  </div>
+
+                 </div>`;
 });

@@ -1,8 +1,21 @@
-.game-instructions-container {
-  width: 300px;
-  height: 500px;
-  border: 1px solid black;
+.game-instructions-title {
+  font-family: Poppins;
+  font-weight: 800;
+  background-color: #ffe9b1;
+  height: 60px;
+  width: 280px;
+  border-radius: 20px;
+  color: black;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  justify-self: flex-start;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.game-instructions-description {
+  padding-left: 5%;
+  padding-right: 5%;
 }

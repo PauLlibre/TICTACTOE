@@ -1,21 +1,35 @@
 .game-table-container {
   width: 500px;
   height: 500px;
-  border: 1px solid black;
   display: grid;
   background-color: var(--main-color-4);
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  background-color: var(--main-color-1);
 }
 
 .game-table-cell {
-  border: 1px solid black;
   width: auto;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 5rem;
+}
+
+.started {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.started-cell {
+  border: 1px solid black;
+}
+
+#logo {
+  position: absolute;
+  top: 20%;
+  left: 30%;
 }
 
 .game-info-container {
@@ -30,6 +44,7 @@
   color: white;
   flex-direction: column;
   gap: 20px;
+  position: relative;
 }
 
 .game-info-title {
@@ -87,13 +102,60 @@
   scale: 1.1;
 }
 
-.game-instructions-container {
-  width: 300px;
-  height: 500px;
-  border: 1px solid black;
+.game-info-description-live {
+  position: absolute;
+  padding-top: 40%;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 40px;
+}
+
+.player-name-container {
+  width: 100px;
+  height: 50px;
+  background-color: white;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
+}
+
+.player-name-container h3 {
+  color: black;
+}
+
+.selected {
+  background-color: var(--main-color-3);
+  box-shadow: 1px 1px 10px 4px var(--main-color-3);
+}
+
+.player-name-container-content {
+  display: flex;
+}
+
+.game-instructions-title {
+  font-family: Poppins;
+  font-weight: 800;
+  background-color: #ffe9b1;
+  height: 60px;
+  width: 280px;
+  border-radius: 20px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  justify-self: flex-start;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.game-instructions-description {
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .winning-screen-container {
@@ -138,6 +200,7 @@
   visibility: hidden;
   left: -100%;
   transition: all 0.5s ease-in-out;
+  align-self: center;
 }
 
 .player-play-mode-main-container {
@@ -156,13 +219,15 @@
 
 .player-play-mode-main-container h1 {
   padding-top: 40px;
+  position: relative;
+  text-align: center;
 }
 
 .player-play-mode-selector {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 70px;
+  gap: 5%;
   padding-top: 70px;
 }
 
@@ -322,4 +387,20 @@ body {
 
 .invisible {
   display: none;
+}
+
+.no-display {
+  visibility: hidden;
+}
+
+@media (max-width: 1120px) {
+  .main-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .game-table-container {
+    grid-column: 1/4;
+    order: -1;
+    margin-top: 40px;
+  }
 }/*# sourceMappingURL=style.css.map */

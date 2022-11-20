@@ -13,6 +13,7 @@
   color: white;
   flex-direction: column;
   gap: 20px;
+  position: relative;
 }
 
 // SECTION TITLE
@@ -73,4 +74,40 @@
 
 .game-info-play-button:hover {
   scale: 1.1;
+}
+
+// LIVE GAME INFO
+
+.game-info-description-live {
+  position: absolute;
+  padding-top: 40%;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 40px;
+}
+
+.player-name-container {
+  width: 100px;
+  height: 50px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.player-name-container h3 {
+  color: black;
+}
+
+.selected {
+  background-color: var(--main-color-3);
+  box-shadow: 1px 1px 10px 4px var(--main-color-3);
+}
+
+.player-name-container-content {
+  display: flex;
 }

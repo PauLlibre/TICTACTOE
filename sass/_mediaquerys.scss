@@ -1,0 +1,11 @@
+@media (max-width: 1120px) {
+  .main-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .game-table-container {
+    grid-column: 1/4;
+    order: -1;
+    margin-top: 40px;
+  }
+}

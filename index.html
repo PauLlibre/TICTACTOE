@@ -16,8 +16,25 @@
   </head>
   <body>
     <div class="main-container">
-      <div class="game-instructions-container">GAME INSTRUCTIONS</div>
-      <div class="game-table-container">
+      <div class="game-info-container">
+        <div class="game-instructions-title"><h2>GAME INSTRUCTIONS</h2></div>
+
+        <div class="game-instructions-description">
+          <h3>GAME MODES</h3>
+          <h4><span class="bold">PLAYER VS PLAYER</span></h4>
+          <p>
+            On player vs player you will be competing against your friends,
+            input your names and start playing!
+          </p>
+          <h4><span class="bold">PLAYER VS CPU</span></h4>
+          <p>
+            On player vs CPU you will be playing agains a computer, heads up he
+            is not very smart...
+          </p>
+        </div>
+      </div>
+      <img id="logo" src="imgs/tictactoe.png" alt="" />
+      <div class="game-table-container" id="game-table-container">
         <div class="game-table-cell" id="cell1"></div>
         <div class="game-table-cell" id="cell2"></div>
         <div class="game-table-cell" id="cell3"></div>
@@ -35,14 +52,18 @@
 
         <div class="game-info-description">
           <p>
-            Welcome to <span class="bold">TIC TAC TOE</span>, Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Distinctio magnam eveniet
-            iusto dolore quia, aliquid dignissimos voluptate consequuntur,
-            minima tempore temporibus quae reiciendis blanditiis quam vitae
-            nulla exercitationem, eaque commodi.
+            Welcome to <span class="bold">TIC TAC TOE</span>, an adaptation of
+            the classic game for browsers. The playing rules are the same that
+            have always been, if you like it please don't doubt on giving a
+            positive review, and if you have any suggestions to make to the game
+            please do so by forking the project.
           </p>
           <p><span class="bold">ENJOY THE GAME!</span></p>
         </div>
+        <div
+          class="game-info-description-live no-display"
+          id="game-info-live"
+        ></div>
         <button class="game-info-play-button" id="infoPlayButton">PLAY</button>
       </div>
       <!-- PLAYER NAMES -->
