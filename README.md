@@ -12,6 +12,8 @@
 ---
 
 <p align="center"> Welcome to TIC TAC TOE, an adaptation of the classic game for browsers. The playing rules are the same that have always been, if you like it please don't doubt on giving a positive review, and if you have any suggestions to make to the game please do so by forking the project.
+
+You can play it online at:  https://paullibre.github.io/TICTACTOE/
     <br> 
 </p>
 
