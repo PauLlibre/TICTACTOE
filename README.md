@@ -38,7 +38,7 @@ You don't need any prerequiste in order to use this project
 
 ## 🎈 Usage <a name="usage"></a>
 
-The game offers to modes, player vs player and plaver vs cpu, in order to use any of those you should just press de play button and a pop-up screen will appear letting you choose, you can only have a maximum of three tokens in game, when you get to the limit you will need to take one off in order to continue playing.
+The game offers two modes, player vs player and plaver vs cpu, in order to use any of those you should just press de play button and a pop-up screen will appear letting you choose, you can only have a maximum of three tokens in game, when you get to the limit you will need to take one off in order to continue playing.
 The computer will play randomly, it's in the process of being upgraded.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
